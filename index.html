@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Scrolling Nav - Start Bootstrap Template</title>
+    <title>Mobile Teacher Splash Page</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -22,8 +22,6 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-      <div class="container">
-        <img src="/img/logo.png" width="50" height="50">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,14 +42,18 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#platform">Platform</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#scorecard">Scorecard</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <header class="bg-primary text-white">
+    <header class="text-white" style="background-color: #0f4c6c;">
       <div class="container text-center">
         <h1>Welcome to Mobile Teacher</h1>
+        <img src="/img/logo.png" width="240" height="240">
         <p class="lead">Watch. Teach. Share.</p>
       </div>
     </header>
@@ -131,17 +133,17 @@
           <div class="col-lg-8 mx-auto">
             <h1>Contribute</h1>
             <p class="lead"><h3>Requirements</h3>
-Your video is…
-<ul>
-<li>2 minutes or shorter</li>
-<li>Shows a teacher who works in a developing country</li>
-<li>Shows a good idea for teaching</li>
-<li>Is in clear, simple English or has a transcript file written in English</li>
-</ul>
-</p>
-<a href="https://docs.google.com/forms/d/1ojgGZX6K4XeZvpdfLWEWdmO6mn_i62tLmrWAV0uVAMo/edit?usp=sharing">
-<button type="button" class="btn btn-primary">Submit a Video</button>
-</a>
+              Your video is…
+              <ul>
+                <li>2 minutes or shorter</li>
+                <li>Shows a teacher who works in a developing country</li>
+                <li>Shows a good idea for teaching</li>
+                <li>Is in clear, simple English or has a transcript file written in English</li>
+              </ul>
+              </p>
+                <a href="https://docs.google.com/forms/d/1ojgGZX6K4XeZvpdfLWEWdmO6mn_i62tLmrWAV0uVAMo/edit?usp=sharing">
+                <button type="button" class="btn text-white" style="background-color: #0f4c6c">Submit a Video</button>
+              </a>
           </div>
         </div>
       </div>
@@ -162,20 +164,64 @@ Your video is…
             YouTube Go gives you:
             Short video preview first.  If you like the video, you can watch or download it.
             Video file size information.  Decide if you want to use your data to get the video.
-            Offline sharing. Get more videos from your friends offline.
-</p>
+            Offline sharing. Get more videos from your friends offline.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="scorecard">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h1>A Scorecard of Best Practices</h2>
+            <p class="lead">Brief description of the scorecard.
+              <br /> <br />
+              <h3> About the Scorecard </h3> <br/>
+              
+              These guidelines were developed using multiple...
+
+              Those can be found linked <a href="./resources.html" target="_blank">here</a>.
+
+              <br /> <br />
+              <embed src="./scorecard.pdf" type="application/pdf" width="100%" height="600px" />
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Mobile Teacher 2018</p>
+    <div class="bg-dark">
+    <footer class="container py-5 bg-dark" style="margin:0 auto;width:50%;">
+      <div class="row">
+        <div class="col-6 col-md">
+          <h5 class="text-white">Follow us...</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://youtube.com/mobileteacher">YouTube</a></li>
+            <li><a class="text-muted" href="https://twitter.com/_mobileteacher">Twitter</a></li>
+            <li><a class="text-muted" href="https://www.instagram.com/mobileteacher/">Instagram</a></li>
+            <li><a class="text-muted" href="https://www.facebook.com/mobileteacher.org/">Facebook</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5 class="text-white">The Team</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted">Katherine Guevara</a></li>
+            <li><a class="text-muted">William Durkee</a></li>
+            <li><a class="text-muted">Sachet Vijay</a></li>
+            <li><a class="text-muted">Tim Malaney</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5 class="text-white">Contact Us</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="mailto:mobileteacher.org@gmail.com">Mail</a></li>
+          </ul>
+        </div>
       </div>
-      <!-- /.container -->
     </footer>
+    </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
