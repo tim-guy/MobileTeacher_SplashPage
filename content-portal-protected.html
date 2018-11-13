@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Links to other research</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+  </head>
+
+  <body class="container">
+
+  <br />
+  <br />
+  <br />
+  <h1>Content Portal</h1>
+  <h2>Adding New Videos to the MobileTeacher Database</h2>
+  <br />
+
+  <div class="form-group">
+    <label>Title</label>
+    <input type="title" class="form-control" id="inputTitleId" placeholder="Enter Title">
+  </div>
+  <div class="form-group">
+    <label>URL</label>
+    <input type="url" class="form-control" id="inputUrlId" placeholder="Enter URL">
+  </div>
+  <div class="form-group">
+    <label>Description of Video</label>
+    <input type="tags" class="form-control" id="inputDescriptionId" placeholder="Enter a Video Description">
+  </div>
+  <div class="form-group">
+    <label>Length of Video (in seconds)</label>
+    <input type="length" class="form-control" id="inputLengthId" placeholder="Enter Length of Video">
+  </div>
+  <div class="form-group">
+    <label>Tags (each separated by a comma)</label>
+    <input type="tags" class="form-control" id="inputTagsId" placeholder="Enter Tags">
+  </div>
+  <button type="submit" class="btn btn-primary" onclick="postVideo()" >Submit</button>
+
+  </body>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+
+  <script >
+    firebase.initializeApp({
+      apiKey: "AIzaSyCAde-t0xEEegn206zVGfSeGelK0Tuu2_4",
+      authDomain: "mobile-teacher-2f1ac.firebaseapp.com",
+      projectId: "mobile-teacher-2f1ac"
+    });
+
+    // Initialize Cloud Firestore through Firebase
+    var db = firebase.firestore();
+
+    function postVideo() {
+      var title = document.getElementById('inputTitleId').value
+      var url = document.getElementById('inputUrlId').value
+      var description = document.getElementById('inputDescriptionId').value
+      var length = document.getElementById('inputLengthId').value
+      var tags = document.getElementById('inputTagsId').value
+
+      db.collection("videos").add({
+        length: length,
+        title: title,
+        url : url,
+        description: description,
+        tags: tags
+      })
+      .then(function(docRef) {
+          console.log("Document written with ID: ", docRef.id);
+      })
+      .catch(function(error) {
+          console.error("Error adding document: ", error);
+      });
+    }
+  </script>
+
+
+
+
+</html>
