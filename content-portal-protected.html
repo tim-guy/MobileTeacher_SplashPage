@@ -84,6 +84,13 @@
       .catch(function(error) {
           console.error("Error adding document: ", error);
       });
+
+      alert('Successfully submitted video to database...');
+      document.getElementById('inputTitleId').value = ""
+      document.getElementById('inputUrlId').value = ""
+      document.getElementById('inputDescriptionId').value = ""
+      document.getElementById('inputLengthId').value = ""
+      document.getElementById('inputTagsId').value = ""
     }
   </script>
 
